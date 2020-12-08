@@ -1,0 +1,106 @@
+<%- include('./layout') -%>
+
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Inner Page</h2>
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li>Inner Page</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+    <% if(admin){ %>
+      
+        <% for(var i = admin.length - 1 ; i >= 0 ; i--) { %>
+        <div class="row">
+   
+      <div class="col-md-12 d-md-flex">
+        <a href="https://res.cloudinary.com/paradox-conceptz/image/upload/v1605283498/images/<%=admin[i].inpFile%>" data-gall="portfolioGallery" class="venobox "  title="<%= admin[i].title %>">
+          <div class="col-md-6 portfolio-item <%= admin.filter %>">
+            <div class="portfolio-links p-4 mx-3" style="background: #040b14; width: 20rem;">
+              <img src="https://res.cloudinary.com/paradox-conceptz/image/upload/v1605283498/images/<%=admin[i].inpFile%>" class="img-fluid" alt="">
+            </div>
+          </div>
+        </a>
+        <div class="col-md-6">
+          <h3 class="text-info capitalize" style="text-transform: uppercase;"><%= admin[i].title %></h3>
+          <p class="p-4 bg-light" ><%= admin[i].writeups %></p>
+        <a href="" id="a">tytuyi</a>
+        </div>
+        
+        <!-- <a href="https://res.cloudinary.com/paradox-conceptz/image/upload/v1605283498/images/<%=admin.inpFile%>" download="<%=admin.inpFile%>">Download</a> -->
+      </div>
+    </div><hr>
+      <%}%>
+    <%}%>
+    <!-- <section class="inner-page">
+      <div class="container">
+        <p>
+          Example inner page template
+        </p>
+      </div>
+    </section> -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="buttom-fixed">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>iPortfolio</span></strong>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <script>
+//     var content = document.getElementById("elem").innerHTML;
+// var dl = document.getElementById('a');
+// dl.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(content));
+// dl.setAttribute('download', 'filename.jpg');
+// // Set hidden so the element doesn't disrupt your page
+// dl.setAttribute('visibility', 'hidden');
+// dl.setAttribute('display', 'none');
+// // Append to page
+// document.body.appendChild(dl);
+// // Now you can trigger the click
+// dl.click();
+
+// function myAlert(){
+//     var content = document.getElementById("elem").innerHTML;
+//     var dl = document.createElement('a');
+//     dl.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(content));
+//     dl.setAttribute('download', 'filename.txt');
+//     dl.click();
+// }
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     document.getElementById('alertButton').addEventListener('click', myAlert);
+// });
+  </script>
+
+

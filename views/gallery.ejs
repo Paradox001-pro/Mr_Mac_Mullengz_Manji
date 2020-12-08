@@ -1,0 +1,201 @@
+<%- include('./layout') -%>
+
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Mullengz Manji</h1>
+      <p>I'm <span class="animate"></span></p>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Gallery</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-female">Female</li>
+              <li data-filter=".filter-male">Male</li>
+              <li data-filter=".filter-lanscape">Lanscape</li>
+              <li data-filter=".filter-others">Others</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+
+          <!-- CLOUD IMAGES -->
+          <% if(admin){ %>
+            <% for(var i = admin.length - 1 ; i >= 0 ; i--) { %>
+          <a href="https://res.cloudinary.com/paradox-conceptz/image/upload/v1605283498/images/<%=admin[i].inpFile%>" data-gall="portfolioGallery" class="venobox" title="<%= admin[i].title %>">
+            <div class="col-lg-4 col-md-6 portfolio-item <%= admin.filter %>">
+              <div class="portfolio-links">
+                <img src="https://res.cloudinary.com/paradox-conceptz/image/upload/v1605283498/images/<%=admin[i].inpFile%>" class="img-fluid" alt="">
+              </div>
+            </div>
+          </a>
+          <%}%>
+          <%}%>
+
+
+
+
+
+          <a href="/public/assets/img/mac/GS 14.JPG" data-gall="portfolioGallery" class="venobox" title="Female Portrait">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-female">
+              <div class="portfolio-links">
+                <img src="/public/assets/img/mac/GS 14.JPG" class="img-fluid" alt="">
+              </div>
+            </div>
+          </a>
+
+          <a href="/public/assets/img/mac/IMG_1825.jpg" data-gall="portfolioGallery" class="venobox" title="Female Portrait">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-female">
+              <div class="portfolio-links">
+                <img src="/public/assets/img/mac/IMG_1825.jpg" class="img-fluid" alt="">
+              </div>
+            </div>
+          </a>
+
+          <a href="/public/assets/img/mac/IMG_2296.jpg" data-gall="portfolioGallery" class="venobox" title="Female Portrait">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-female">
+              <div class="portfolio-links">
+                <img src="/public/assets/img/mac/IMG_2296.jpg" class="img-fluid" alt="">
+              </div>
+            </div>
+          </a>
+
+          <a href="/public/assets/img/mac/IMG_8355.jpg" data-gall="portfolioGallery" class="venobox" title="Male Portrait">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-male">
+              <div class="portfolio-links">
+                <img src="/public/assets/img/mac/IMG_8355.jpg" class="img-fluid" alt="">
+              </div>
+            </div>
+          </a>
+
+          <a href="/public/assets/img/mac/Kris 4.JPG" data-gall="portfolioGallery" class="venobox" title="Male Portrait">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-male">
+              <div class="portfolio-links">
+                <img src="/public/assets/img/mac/Kris 4.JPG" class="img-fluid" alt="">
+              </div>
+            </div>
+          </a>
+
+          <a href="/public/assets/img/mac/IMG_8318.jpg" data-gall="portfolioGallery" class="venobox" title="Male Portrait">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-male">
+              <div class="portfolio-links">
+                <img src="/public/assets/img/mac/IMG_8318.jpg" class="img-fluid" alt="">
+              </div>
+            </div>
+          </a>
+
+          <a href="/public/assets/img/mac/2.jpg" data-gall="portfolioGallery" class="venobox" title="Landscape">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-lanscape">
+              <div class="portfolio-links">
+                <img src="/public/assets/img/mac/2.jpg" class="img-fluid" alt="">
+              </div>
+            </div>
+          </a>
+
+          <a href="/public/assets/img/mac/lanscape1.JPG" data-gall="portfolioGallery" class="venobox" title="Landscape">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-lanscape">
+              <div class="portfolio-links">
+                <img src="/public/assets/img/mac/lanscape1.JPG" class="img-fluid" alt="">
+              </div>
+            </div>
+          </a>
+
+          <a href="/public/assets/img/mac/lanscape2.jpg" data-gall="portfolioGallery" class="venobox" title="Landscape">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-lanscape">
+              <div class="portfolio-links">
+                <img src="/public/assets/img/mac/lanscape2.jpg" class="img-fluid" alt="">
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright ">
+        Copyright <strong><img src="../public/assets/img/Copyright Macc.png" alt=""></strong>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    var typed = new Typed('.animate', {
+      strings: [
+        "A Photographer",
+        "A Graphic Designer",
+        "A Freelancer",
+        "A Cartoonist",
+        "An Artist"
+      ],
+      backSpeed: 80,
+      typeSpeed: 80,
+      loop: true
+    })
+  </script>
+
+
+
+</body>
+
+</html>
