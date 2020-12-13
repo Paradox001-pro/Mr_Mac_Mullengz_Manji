@@ -1,51 +1,7 @@
-<%- include('./layout') -%>
 
 
-<!-- ======= Header ======= -->
-<header id="header">
-  <div class="d-flex flex-column">
 
-    <div class="profile">
-      <img src="../public/assets/img/5.jpg" alt="" class="img-fluid rounded-circle">
-      <h1 class="text-light"><a href="index.html">MacMullengz Manji</a></h1>
-      <div class="social-links mt-3 text-center">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
-    </div>
 
-    <nav class="nav-menu">
-      <ul>
-
-        <% if (isAuthenticated) { %>
-        <li><a href="/"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="/#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a href="/#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-        <li><a href="/#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
-        <li class="active"><a href="/gallery"><i class="bx bx-book-content"></i> Gallery</a></li>
-        <li><a href="/#services"><i class="bx bx-server"></i> Services</a></li>
-        <li><a href="/#contact"><i class="bx bx-envelope"></i> Contact</a></li>
-        <a href="/dashboard" class="btn btn-success">ADMIN DASHBORAD</a>
-        <% } else { %>
-        <li><a href="/"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="/#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a href="/#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-        <li><a href="/#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
-        <li class="active"><a href="/gallery"><i class="bx bx-book-content"></i> Gallery</a></li>
-        <li><a href="/#services"><i class="bx bx-server"></i> Services</a></li>
-        <li><a href="/#contact"><i class="bx bx-envelope"></i> Contact</a></li>
-
-        <% } %>
-
-      </ul>
-    </nav><!-- .nav-menu -->
-    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
-
-  </div>
-</header><!-- End Header -->
 
 
 <body>
@@ -70,8 +26,8 @@
           <h2>DashBoard</h2>
           <ol class="float-right">
             <span class="text-info h4 px-3"> <%= name %></span>
-            <a href="users/logout" class="btn btn-danger">Logout</a>
-            <button class="btn btn-primary btn-block p-1 m-1" data-toggle="modal"
+            <a href="users/logout" class="btn btn-outline-danger">Logout</a>
+            <button class="btn btn-outline-primary btn-block p-1 m-1" data-toggle="modal"
               data-target="#contactModal">UPLOAD</button>
 
 
@@ -86,51 +42,7 @@
 
 
 
-    <div class="modal fade text-dark" id="contactModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="contactModalTitle">UPLOAD</h5>
-            <button class="close" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <!-- UPLOADER -->
-            <div class="container text-center border mb-md-3">
-              <form action="/users/dashboard" method="POST">
-                <h3 class="p-3">DO YOU WANT TO UPLOAD OR POST...?!</h3>
 
-
-                <div class="form-group image-preview mx-auto text-center" id="imagePreview">
-                  <!-- <img src="https://res.cloudinary.com/paradox-conceptz/image/upload/v1605275190/MACMULLENGZ/" alt="Image Preview" id="" class="image-preview__image"> -->
-                  <span class="form-group image-preview__default-text">Image Preview</span>
-
-                </div>
-                <input class="form-control inpFile" type="file" name="inpFile" id="file-upload">
-                <textarea class="form-control" name="writeups" id="" cols="30" rows="10"></textarea>
-                <div class="col-6">
-                  <select name="filter" id="filter">
-                    <option>filter-male</option>
-                    <option>filter-female</option>
-                    <option>filter-landscape</option>
-                    <option>filter-others</option>
-
-
-
-                  </select>
-                </div>
-                <div class="col-6">
-                  <input type="text" name="title" id="title" placeholder="Please write Image Title Here">
-                </div>
-                <input class="form-control my-4 btn btn-success" type="submit" value="SAVE">
-
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
 
@@ -177,28 +89,14 @@
   <!-- ======= Footer ======= -->
 
 
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><img src="../public/assets/img/Copyright Macc.png" alt=""></strong>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
 
-        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
 
 
 
 
 
   <!-- MODALS -->
-  <div class="modal fade text-dark" id="contactModal">
+  <div class="modal fade text-dark mb-4" id="contactModal">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -211,17 +109,31 @@
           <!-- UPLOADER -->
           <div class="container text-center border mb-md-3">
             <form action="/users/dashboard" method="POST">
-              <h3 class="p-3">DO YOU WANT TO UPLOAD OR POST...?!</h3>
+              <h6 class="p-3">DO YOU WANT TO UPLOAD OR POST...?!</h6>
 
 
-              <div class="form-group image-preview mx-auto text-center" id="imagePreview">
-                <img src="" alt="Image Preview" id="" class="image-preview__image">
+              <!-- <div class="form-group image-preview mx-auto text-center" id="imagePreview">
+                <img src="" alt="Image Preview" id="img-preview" class="image-preview__image">
                 <span class="form-group image-preview__default-text">Image Preview</span>
 
               </div>
-              <input class="form-control inpFile" type="file" name="inpFile" id="file-upload">
+              <input class="form-control inpFile" type="file" name="inpFile" id="file-upload"> -->
+
+              <div class="card1">
+                <div class="col-md-6 text-center">
+
+                  <img src="" id="img-preview" style="width: 100%;" />
+
+                </div>
+                <label class="file-upload-container" for="file-upload">
+                  <!-- <input id="file-upload" type="file" style="display:none;"> -->
+              <input class="form-control inpFile" type="file" name="inpFile" id="file-upload" style="display:none;" >
+                  
+                  Select an Image
+                </label>
+              </div>
               <textarea class="form-control" name="writeups" id="" cols="30" rows="10"></textarea>
-              <div class="col-6 form-group">
+              <div class=" form-group">
                 <select class="form-control" name="filter" id="filter">
                   <option>filter-male</option>
                   <option>filter-female</option>
@@ -232,10 +144,10 @@
 
                 </select>
               </div>
-              <div class="col-6 form-group">
+              <div class=" form-group">
                 <input class="form-control" type="text" name="title" id="title" placeholder="Please write Image Title Here">
               </div>
-              <input class="form-control my-4 btn btn-success" type="submit" value="SAVE">
+              <input class="form-control my-4 btn btn-outline-success" type="submit" value="SAVE">
 
             </form>
           </div>
@@ -249,7 +161,7 @@
    <% var c = 0;%>
     <% for(var i = user.length - 1 ; i >= 0 ; i--) { %>
       
-
+  
   <div class="modal fade text-dark" id="MESSAGESModal<%=c%>">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -263,72 +175,42 @@
           <!-- UPLOADER -->
           
           <div class="container text-center border mb-md-3">
-
+  
           <h3 class="text-info my-3"><%= user[i].name %></h3>
-
+  
             <p class="bg-info h5 text-white p-3 m-0"> Request </p>
           <p class="text-white bg-dark  mb-4 p-2 m-0"> <%= user[i].subject %></p>
-
-
+  
+  
           <p class="bg-info h5 text-white p-3 m-0"> Contact </p>
           <p class="text-white bg-dark  mb-4 p-2 m-0"> <%= user[i].email %></p>
-
+  
           <p class="bg-info h5 text-white p-3 m-0">Message </p>
           <p class="text-white bg-dark mb-4 p-2 m-0"> <%= user[i].message %></p>
         </div>
       </div>
     </div>
   </div>
-</div>
-<% c++; %>
-<% } %>
-<% } %>
+  </div>
+  <% c++; %>
+  <% } %>
+  <% } %>
+
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-  <!-- <script src="../public/assets/js/preview.js"></script> -->
+
+
+
+  <script src="../public/assets/js/preview.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
   <script src="../public/assets/scripts/app.js"></script>
 
 
-  <!-- <script>
-        var CLOUDINARY_URL = 'https://api.cloudinary.com/v1_1/paradox-conceptz/MACMULLENGZ';
-var CLOUDINARY_UPLOAD_PRESET = 'mk0trqn4'
 
 
-    // var Cloudinary::Uploader.upload("my_image.jpg", :use_filename => true, :unique_filename => false)
+  <!-- ========================== CLOUDINARY UPLOAD ==================== -->
 
-
-
-
-// var imgPreview = document.getElementById('img-preview');
-var fileUpload = document.getElementById('file-upload');
-
-
-fileUpload.addEventListener('change', (event)  => {
-    var file = event.target.files[0];
-    var formData = new FormData();
-    formData.append('file', file);
-    // formData.append("eager", "w_400,h_300,c_pad|w_260,h_200,c_crop");
-    // formData.append("public_id", "sample_image");
-    formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
-    console.log(file);
-    // Cloudinary::Uploader.upload("my_image.jpg", :use_filename => true, :unique_filename => false)
-
-
-    axios({
-        url: CLOUDINARY_URL,
-        method: 'POST',
-        header: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        data: formData
-    }).then( () => {
-        console.log(res)
-        // imgPreview.src = res.data.secure_url;
-    }).catch( () => {
-        console.log(err)
-    })
-})
-  </script> -->
 
 
 
@@ -336,4 +218,7 @@ fileUpload.addEventListener('change', (event)  => {
 
 </body>
 
-</html>
+
+
+
+
