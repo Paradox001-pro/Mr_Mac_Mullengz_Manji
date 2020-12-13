@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="../img/MEDIAa.png" rel="icon">
+  <link href="../public/assets/img/favicon.png" rel="icon">
   <link href="../public/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -44,10 +44,11 @@
 
 <!-- ======= Header ======= -->
 <header id="header">
+
   <div class="d-flex flex-column">
 
     <div class="profile">
-      <img src="../img/5.jpg" alt="" class="img-fluid rounded-circle">
+      <img src="../public/assets/img/5.jpg" alt="" class="img-fluid rounded-circle">
       <h1 class="text-light"><a href="index.html">MacMullengz Manji</a></h1>
       <div class="social-links mt-3 text-center">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -61,95 +62,105 @@
     <nav class="nav-menu">
       <ul>
        
+        <li><a href="/"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="/#about"><i class="bx bx-user"></i> <span>About</span></a></li>
+        <li><a href="/#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+        <li><a href="/#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
+        <li class="active"><a href="/gallery"><i class="bx bx-book-content"></i> Gallery</a></li>
+        <li><a href="/#services"><i class="bx bx-server"></i> Services</a></li>
+        <li><a href="/#contact"><i class="bx bx-envelope"></i> Contact</a></li>
+        <a href="/blog" class="btn btn-outline-info">BLOG</a>
         <% if (isAuthenticated) { %>
-          <li><a href="/"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="/#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="/#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="/#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
-          <li class="active"><a href="/gallery"><i class="bx bx-book-content"></i> Gallery</a></li>
-          <li><a href="/#services"><i class="bx bx-server"></i> Services</a></li>
-          <li><a href="/#contact"><i class="bx bx-envelope"></i> Contact</a></li>
-          <a href="/dashboard" class="btn btn-success">ADMIN DASHBOARD</a>
-        <% } else { %>
-          <li><a href="/"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="/#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="/#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="/#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
-          <li class="active"><a href="/gallery"><i class="bx bx-book-content"></i> Gallery</a></li>
-          <li><a href="/#services"><i class="bx bx-server"></i> Services</a></li>
-          <li><a href="/#contact"><i class="bx bx-envelope"></i> Contact</a></li>
+          <a href="/dashboard" class="btn btn-outline-primary">ADMIN DASHBOARD</a>
 
-          <% } %>
+        <% }  %>
 
       </ul>
     </nav><!-- .nav-menu -->
     <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
-
+    
+    
   </div>
+      <footer id="footer">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><img src="../public/assets/img/Copyright Macc.png" alt=""></strong>
+        </div>
+        <div class="credits">
+    
+        </div>
+      </div>
+    </footer><!-- End  Footer -->
 </header><!-- End Header -->
 
 
 
 
 
-
-    <div class="constainer">
-      
-
-
-
+<body class="body">
+  <div class="">
+      <%- body %>
+  </div>
 
 
-
-
-
-
-
-    </div>
-    
-
-
-
-
+  
+  
    <!-- Vendor JS Files -->
-   <script src="../public/assets/vendor/jquery/jquery.min.js"></script>
-   <script src="../public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-   <script src="../public/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-   <script src="../public/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-   <script src="../public/assets/vendor/php-email-form/validate.js"></script>
-   <script src="../public/assets/vendor/counterup/counterup.min.js"></script>
-   <script src="../public/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-   <script src="../public/assets/vendor/venobox/venobox.min.js"></script>
-   <script src="../public/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-   <script src="../public/assets/vendor/typed.js/typed.js"></script>
-   <script src="../public/assets/vendor/aos/aos.js"></script>
-   <script src="../public/assets/scripts/app.js"></script>
+   <script src="/public/assets/vendor/jquery/jquery.min.js"></script>
+   <script src="/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="/public/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+   <script src="/public/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+   <script src="/public/assets/vendor/php-email-form/validate.js"></script>
+   <script src="/public/assets/vendor/counterup/counterup.min.js"></script>
+   <script src="/public/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+   <script src="/public/assets/vendor/venobox/venobox.min.js"></script>
+   <script src="/public/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+   <script src="/public/assets/vendor/typed.js/typed.js"></script>
+   <script src="/public/assets/vendor/aos/aos.js"></script>
+
+   <!-- <script src="/public/assets/scripts/app.js"></script> -->
    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   
+   <!-- <script src="/public/assets/js/preview.js"></script> -->
 
-   <script src="../public/assets/js/preview.js"></script>
 
 
+
+
+
+
+   
+
+
+   
+   
 
    <!-- IMAGE PREVIEW -->
 
- 
+   
    <!-- Template Main JS File -->
    <script src="../public/assets/js/main.js"></script>
 
 
-
+   
    <!-- <script>
      var typed = new Typed('.animate', {
        strings: [
-         "developer",
+       "developer",
          "photographer",
          "freelancer"
-       ],
+         ],
 
-       loop: true
+         loop: true
      })
-   </script> -->
+    </script> -->
+    </body>
 
 
 
-</html>
+
+    
+
+    
+
+
