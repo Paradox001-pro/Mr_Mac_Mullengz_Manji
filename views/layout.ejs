@@ -143,17 +143,29 @@
 
 
    
-   <!-- <script>
-     var typed = new Typed('.animate', {
-       strings: [
-       "developer",
-         "photographer",
-         "freelancer"
-         ],
-
-         loop: true
-     })
-    </script> -->
+  <script>
+    var typed = new Typed('.animate', {
+      strings: [
+        "A Photographer",
+        "A Graphic Designer",
+        "An Artist",
+        "A Cartoonist",
+        "A Freelancer"
+      ],
+      backSpeed: 40,
+      typeSpeed: 70,
+      smartBackspace: true,
+      backDelay: 1500,
+      loop: true
+    })
+  </script>
+  <script>
+    $(document).ready(() => {
+      setTimeout(() => {
+        $('.time-go').slideUp(900);
+      }, 5000)
+    });
+  </script>
     </body>
 
 
